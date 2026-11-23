@@ -301,7 +301,7 @@ a:hover{color:#FF9A57}
         <p style="margin: 0; max-width: 50ch; color: #B4C6D3">Tell us the date, the size of the audience and what you need: planning, tickets, voting or payments. We will come back with a plan and a quote.</p>
       </div>
       <div style="flex: 1 1 340px; min-width: 0; box-sizing: border-box; background: #0F2231; border: 1px solid #1F3A4F; border-radius: 8px; padding: 32px; display: flex; flex-direction: column; gap: 22px">
-        <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #9DB1C0">Email</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 20px">[YOUR EMAIL]</span></div>
+        <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #9DB1C0">Email</span><a href="mailto:surulereict@gmail.com" style="color: #EAF1F6; font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 20px; overflow-wrap: anywhere">surulereict@gmail.com</a></div>
         <div style="display: flex; flex-direction: column; gap: 2px">
           <span style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #9DB1C0">Phone</span>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding-bottom: 6px">
@@ -321,6 +321,100 @@ a:hover{color:#FF9A57}
         </div>
         <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #9DB1C0">Address</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 20px">Surulere, Lagos, Nigeria</span></div>
       </div>
+      <form id="enquiry-form" novalidate style="flex: 1 1 100%; min-width: 0; box-sizing: border-box; background: #0F2231; border: 1px solid #1F3A4F; border-radius: 8px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <h3 style="margin: 0; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 26px">Send us an enquiry</h3>
+          <p style="margin: 0; color: #B4C6D3; font-size: 16px">Tell us about your event. We reply to the email or phone number you give us.</p>
+        </div>
+
+        <input type="checkbox" name="botcheck" id="f-botcheck" tabindex="-1" autocomplete="off" style="display: none">
+
+        <div style="display: flex; flex-wrap: wrap; gap: 20px">
+          <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+            <label for="f-name" style="font-size: 14px; font-weight: 500; color: #C5D3DE">Your name</label>
+            <input id="f-name" name="name" type="text" required autocomplete="name" style="width: 100%; box-sizing: border-box; background: #07131D; color: #EAF1F6; border: 1px solid #2A4A60; border-radius: 6px; padding: 13px 14px; font-family: inherit; font-size: 16px">
+          </div>
+          <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+            <label for="f-email" style="font-size: 14px; font-weight: 500; color: #C5D3DE">Email</label>
+            <input id="f-email" name="email" type="email" required autocomplete="email" style="width: 100%; box-sizing: border-box; background: #07131D; color: #EAF1F6; border: 1px solid #2A4A60; border-radius: 6px; padding: 13px 14px; font-family: inherit; font-size: 16px">
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 20px">
+          <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+            <label for="f-phone" style="font-size: 14px; font-weight: 500; color: #C5D3DE">Phone or WhatsApp (optional)</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" style="width: 100%; box-sizing: border-box; background: #07131D; color: #EAF1F6; border: 1px solid #2A4A60; border-radius: 6px; padding: 13px 14px; font-family: inherit; font-size: 16px">
+          </div>
+          <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+            <label for="f-service" style="font-size: 14px; font-weight: 500; color: #C5D3DE">What do you need?</label>
+            <select id="f-service" name="service" style="width: 100%; box-sizing: border-box; background: #07131D; color: #EAF1F6; border: 1px solid #2A4A60; border-radius: 6px; padding: 13px 14px; font-family: inherit; font-size: 16px">
+              <option value="Event management">Event management</option>
+              <option value="Event ticketing system">Event ticketing system</option>
+              <option value="Awards and voting">Awards and voting</option>
+              <option value="Payment integration">Payment integration</option>
+              <option value="More than one service">More than one service</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <label for="f-message" style="font-size: 14px; font-weight: 500; color: #C5D3DE">Event details</label>
+          <textarea id="f-message" name="message" required rows="5" placeholder="Event name, date, venue and expected number of guests" style="width: 100%; box-sizing: border-box; background: #07131D; color: #EAF1F6; border: 1px solid #2A4A60; border-radius: 6px; padding: 13px 14px; font-family: inherit; font-size: 16px; resize: vertical"></textarea>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+          <button id="f-submit" type="submit" style="background: #EF711D; color: #06101A; border: 0; border-radius: 4px; padding: 15px 28px; font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 0.02em; cursor: pointer">Send enquiry</button>
+          <p id="f-status" role="status" aria-live="polite" style="margin: 0; font-size: 15px; color: #B4C6D3; min-width: 0"></p>
+        </div>
+      </form>
+      <style>
+        #enquiry-form input:focus, #enquiry-form select:focus, #enquiry-form textarea:focus { outline: 2px solid #EF711D; outline-offset: 1px }
+        #enquiry-form button:focus-visible { outline: 2px solid #EAF1F6; outline-offset: 3px }
+        #enquiry-form button[disabled] { opacity: 0.6; cursor: default }
+      </style>
+      <script>
+        (function () {
+          var KEY = 'YOUR_ACCESS_KEY';
+          var form = document.getElementById('enquiry-form');
+          var status = document.getElementById('f-status');
+          var btn = document.getElementById('f-submit');
+          function say(msg, ok) {
+            status.textContent = msg;
+            status.style.color = ok === true ? '#7FD4A0' : ok === false ? '#FF9A8A' : '#B4C6D3';
+          }
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (document.getElementById('f-botcheck').checked) { return; }
+            var name = document.getElementById('f-name').value.trim();
+            var email = document.getElementById('f-email').value.trim();
+            var message = document.getElementById('f-message').value.trim();
+            if (!name || !email || !message) { say('Please fill in your name, email and event details.', false); return; }
+            if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { say('Please enter a valid email address.', false); return; }
+            if (KEY.indexOf('YOUR_') === 0) { say('The form is not switched on yet. Please call or message us on WhatsApp.', false); return; }
+            btn.disabled = true; say('Sending...');
+            fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify({
+                access_key: KEY,
+                subject: 'New enquiry from the Tiqora website',
+                from_name: 'Tiqora website',
+                name: name,
+                email: email,
+                phone: document.getElementById('f-phone').value.trim(),
+                service: document.getElementById('f-service').value,
+                message: message
+              })
+            }).then(function (r) { return r.json(); }).then(function (data) {
+              if (data && data.success) { form.reset(); say('Thank you. Your enquiry has been sent and we will reply soon.', true); }
+              else { say('Your enquiry could not be sent. Please call or message us on WhatsApp.', false); }
+            }).catch(function () {
+              say('Your enquiry could not be sent. Please call or message us on WhatsApp.', false);
+            }).then(function () { btn.disabled = false; });
+          });
+        })();
+      </script>
+
     </div>
   </section>
 
